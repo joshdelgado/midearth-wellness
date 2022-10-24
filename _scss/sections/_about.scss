@@ -1,0 +1,111 @@
+@use '../variables' as *;
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  background-color: var(--purple);
+
+  &__img {
+    flex: 1 1 50%;
+    height: 60vh;
+	max-width: 100%;
+    background-image: url('/assets/img/jess-temp.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+	box-shadow: 2px 0px 10px 0px rgb(0 0 0 / 10%);
+	overflow-y: hidden;
+  }
+
+  &__text {
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+
+      p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: var(--white);
+        padding: 0 4rem;
+      }
+
+      a {
+          display: block;
+          font-weight: 700;
+          color: var(--white);
+          padding-top: 2rem;
+          text-align: right;
+      }
+
+      i {
+        padding-left: 0.5rem;
+      }
+  }
+
+  &__title {
+      width: 100%;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 2rem;
+      text-align: center;
+  }
+}
+
+
+@media (max-width: map-get($breakpoints, 'wide')){
+	.about {
+		&__img {
+			height: 50vh;
+		}
+		&__text p {
+			padding: 0 2rem;
+		}
+	}
+}
+@media (max-width: map-get($breakpoints, 'medium')){
+	.about {
+		&__img {
+			flex: 1 1 40%;
+			border-radius: calc(var(--border-radius) * 2);
+		}
+	}
+}
+@media (max-width: map-get($breakpoints, 'small')){
+	.about {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 5rem 3rem 3rem;
+
+		&__img {
+			flex: 0 0 25rem;
+			width: 27rem;
+			height: 27rem;
+			margin-bottom: 5rem;
+		}
+		&__text {
+			flex: 1 1 100%;
+			max-width: 660px;
+			padding: 0;
+
+			p {
+				padding: 0;
+			}
+		}
+	}
+}
+@media (max-width: map-get($breakpoints, 'tiny')){
+	.about {
+		padding: 3rem 1rem;
+
+		&__img {
+			max-width: 100%;
+		}
+	}
+}

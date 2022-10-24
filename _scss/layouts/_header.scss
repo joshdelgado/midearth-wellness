@@ -1,0 +1,157 @@
+@use '../variables' as *;
+
+.header {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: var(--white);
+  padding: 1rem;
+  box-shadow: 0px 2px 6px 0px rgb(0 0 0 / 10%);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: var(--container);
+    margin: 0 auto;
+  }
+
+  &__spacer {
+    width: 143px;
+  }
+
+  &__img {
+    height: 5rem;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--purple);
+	margin-bottom: 0.5rem;
+
+    a {
+      font-weight: 700;
+    }
+  }
+  
+  &__hidden-checkbox {
+	display: none;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1rem;
+    width: 100%;
+
+    a {
+      font-weight: 700;
+      color: var(--purple);
+    }
+  }
+
+  &__mobile-menu {
+	display: none;
+	
+	i {
+		font-size: 2rem;
+		color: var(--purple);
+	}
+
+  }
+}
+
+
+@media (max-width: map-get($breakpoints, 'small')){
+	.header {
+		padding: 0.25rem 1.25rem 0.5rem;
+
+		&__inner {
+			justify-content: space-between;
+		}
+		
+		&__nav{
+			position: absolute;
+			top: 135px;
+			left: 0;
+			z-index: -1;
+			padding: 1.25rem 0;
+			width: 100vw;
+
+			a {
+				color: var(--white);
+				opacity: 0;
+				transition: all 350ms ease;
+			}
+
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				width: 100vw;
+				height: 100%;
+				background-color: var(--purple);
+				box-shadow: 0px 2px 6px 0px rgb(0 0 0 / 10%);
+				transform: translateY(0) scaleY(0);
+				transform-origin: top;
+				transition: all 350ms ease;
+			}
+		}
+
+		&__spacer {
+			order: 2;
+			width: 2rem;
+		}
+
+		&__mobile-menu {
+			display: block;
+			width: 2rem;
+			text-align: center;
+			order: 4;
+		}
+		
+
+		&__hidden-checkbox {
+			display: block;
+
+			&:checked + .header__nav{
+				a {
+					opacity: 1;
+				}
+				&:after {
+					transform: translateY(0) scaleY(1);
+				}
+			}
+		}
+
+		&__img {
+			order: 3;
+		}
+
+		&__link {
+			flex-direction: row;
+			gap: 0.5rem;
+			order: 1;
+			width: 100%;
+			margin: 0;
+			padding: 0.5rem 0.5rem 1rem;
+		}
+	}
+}
+
+@media (max-width: map-get($breakpoints, 'tiny')){
+	.header {
+		&__spacer {
+			display: none;
+		}
+	}
+}

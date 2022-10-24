@@ -1,0 +1,191 @@
+@use '../variables' as *;
+
+.hero {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 45vw;
+  min-height: 600px;
+  max-height: 800px;
+  background-image: url('/assets/img/midearth-nikhil-prasad.jpg');
+  background-position: left 68%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 10rem;
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: calc((100% - var(--container)) / 2);
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.7);
+    backdrop-filter: blur(4px) grayscale(50%) brightness(160%);
+  }
+
+  &__stuff {
+    position: relative;
+    max-width: calc(920px + ((100% - var(--container)) / 2));
+    background-color: rgba(245,245,245,0.7);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: calc((100% - var(--container)) / 2);
+    padding-left: 5rem;
+
+    &:after {
+        content: '';
+        position: absolute;
+		top: 0;
+        left: -10rem;
+        width: 10rem;
+        height: 100%;
+        background: linear-gradient(-90deg, rgba(245,245,245,0.7) 0%, rgba(245,245,245,0) 100%);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+
+    li {
+      color: var(--green);
+      font-size: 1.25rem;
+      font-weight: 700;
+
+      &:nth-child(-n+2):after {
+        content: '|';
+        padding-left: 0.75rem;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 2.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__link {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--green);
+    padding-top: 1rem;
+
+    i {
+      padding-left: 0.5rem;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    height: 3rem;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(250,250,250,0) 100%);
+  }
+}
+
+
+
+@media (max-width: map-get($breakpoints, 'wide')){
+	.hero{
+		&__inner {
+			padding: 0;
+		}
+		&__stuff {
+			padding-right: 3rem;
+			padding-left: 3rem;
+			max-width: 760px;
+		}
+		&__text {
+			font-size: 2.25rem;
+		}
+		&__list li,
+		&__link {
+			font-size: 1rem;
+		}
+	}
+}
+
+
+
+@media (max-width: map-get($breakpoints, 'medium')){
+	.hero{
+		margin-bottom: 7rem;
+
+		&__stuff {
+			max-width: 660px;
+		}
+	}
+}
+
+
+@media (max-width: map-get($breakpoints, 'small')){
+	.hero{
+		background-position: left bottom;
+		background-size: cover;
+		min-height: 0;
+		height: 27rem;
+
+		&__stuff {
+			max-width: 100%;
+			padding: 3rem 1rem;
+			justify-content: flex-end;
+
+			&:after{
+				content: none;
+			}
+		}
+
+		&__text {
+			text-align: center;
+		}
+
+		&__list {
+			justify-content: center;
+		}
+
+		&__link {
+			text-align: center;
+			font-size: 1.25rem;
+			padding: 1rem;
+			margin-top: 4.5rem;
+		}
+
+	}
+}
+
+@media (max-width: map-get($breakpoints, 'tiny')){
+	.hero {
+		height: 24rem;
+
+		&__stuff {
+			padding: 3rem 1rem;
+		}
+		&__text {
+			font-size: 2rem;
+		}
+		&__list {
+			justify-content: center;
+			gap: 0.5rem;
+
+			li {
+				font-size: .75rem;
+
+				&:nth-child(-n+2):after {
+					padding-left: 0.5rem;
+				}
+			}
+		}
+		&__link {			
+			margin-top: auto;
+		}
+	}
+}

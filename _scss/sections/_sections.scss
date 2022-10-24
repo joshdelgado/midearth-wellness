@@ -1,0 +1,54 @@
+@use '../variables' as *;
+@forward 'about';
+@forward 'hero';
+@forward 'motto';
+@forward 'services';
+
+.section {
+  max-width: var(--container);
+  margin: 0 auto 10rem;
+
+  &__container {
+	margin: 0 2rem;
+  }
+
+  &__title {
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--purple);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &--no-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 100%;
+      gap: 4rem;
+      width: 100%;
+  }
+}
+
+@media (max-width: map-get($breakpoints, 'medium')){
+	.section {
+		margin-bottom: 7rem;
+
+		&__container {
+			margin: 0 1rem;
+		}
+	}
+}
+
+@media (max-width: map-get($breakpoints, 'small')){
+	.section {
+		margin-bottom: 5rem;
+	}
+}
+
+@media (max-width: map-get($breakpoints, 'tiny')){
+	.section {
+		margin-bottom: 4rem;
+	}
+}

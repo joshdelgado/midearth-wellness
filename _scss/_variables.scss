@@ -1,0 +1,22 @@
+:root {
+  --black: #222222;
+  --white: #fafafa;
+  --green: #527f76;
+  --purple: #8681A4;
+  --dark: #234B15;
+  --light: #568178;
+
+  --container: 1280px;
+  --border-radius: 8px;
+
+  --breakpoint-wide: var(--container);
+  --breakpoint-medium: 1024px;
+  --breakpoint-small: 600px;
+}
+
+$breakpoints: (
+	'wide': 1280px,
+	'medium': 1024px,
+	'small': 860px,
+	'tiny': 480px
+);
