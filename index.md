@@ -4,6 +4,7 @@
 
 layout: default
 title: Home
+description: Mobile Massage Therapy in Littleton and Morrison
 services:
 - title: Therapeutic Massage
   description: This session will feature deeper work to the clients comfort level. This massage is to relieve any severe or chronic pain.
