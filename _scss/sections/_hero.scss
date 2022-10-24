@@ -79,6 +79,17 @@
     i {
       padding-left: 0.5rem;
     }
+	svg {
+		display: inline-block;
+		height: 1.25rem;
+		padding-left: 0.5rem;
+		position: relative;
+		top: 3px;
+
+		path {
+			fill: var(--green);
+		}
+	}
   }
 
   &:after {
