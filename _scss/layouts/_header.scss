@@ -59,9 +59,12 @@
   &__mobile-menu {
 	display: none;
 	
-	i {
-		font-size: 2rem;
-		color: var(--purple);
+	svg {
+		display: inline-block;
+		width: 2rem;
+		path {
+			fill: var(--purple);
+		}
 	}
 
   }
@@ -70,7 +73,7 @@
 
 @media (max-width: map-get($breakpoints, 'small')){
 	.header {
-		padding: 0.25rem 1.25rem 0.5rem;
+		padding: 0.5rem 1.25rem 0.5rem;
 
 		&__inner {
 			justify-content: space-between;
@@ -150,6 +153,9 @@
 
 @media (max-width: map-get($breakpoints, 'tiny')){
 	.header {
+		&__link {
+			padding: 0.5rem 0 1rem;
+		}
 		&__spacer {
 			display: none;
 		}

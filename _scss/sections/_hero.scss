@@ -57,7 +57,7 @@
       font-size: 1.25rem;
       font-weight: 700;
 
-      &:nth-child(-n+2):after {
+      &:nth-last-child(n+2):after {
         content: '|';
         padding-left: 0.75rem;
       }
@@ -189,13 +189,31 @@
 			li {
 				font-size: .75rem;
 
-				&:nth-child(-n+2):after {
+				&:nth-last-child(n+2):after {
 					padding-left: 0.5rem;
 				}
 			}
 		}
 		&__link {			
 			margin-top: auto;
+		}
+	}
+}
+
+@media (max-width: map-get($breakpoints, 'micro')){
+	.hero {
+		&__text {
+			font-size: 1.75rem;
+		}
+		&__list {
+			li {
+				&:nth-last-child(2):after{
+					content: none;
+				}
+				&:last-child {
+					display: none;
+				}
+			}
 		}
 	}
 }

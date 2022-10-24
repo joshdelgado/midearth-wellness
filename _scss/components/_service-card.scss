@@ -75,3 +75,13 @@
 		}
 	}
 }
+
+
+@media (max-width: map-get($breakpoints, 'micro')){
+	.service-card {
+		&__rates {
+			flex-direction: column;
+			gap: 0.25rem;
+		}
+	}
+}
