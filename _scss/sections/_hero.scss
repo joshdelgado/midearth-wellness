@@ -21,14 +21,13 @@
     padding-left: calc((100% - var(--container)) / 2);
     height: 100%;
     width: 100%;
-    background-color: rgba(255,255,255,0.7);
-    backdrop-filter: blur(4px) grayscale(50%) brightness(160%);
+    background-color: rgba(255,255,255,0.15);
   }
 
   &__stuff {
     position: relative;
     max-width: calc(920px + ((100% - var(--container)) / 2));
-    background-color: rgba(245,245,245,0.7);
+    background-color: rgba(245,245,245,0.8);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -43,7 +42,7 @@
         left: -10rem;
         width: 10rem;
         height: 100%;
-        background: linear-gradient(-90deg, rgba(245,245,245,0.7) 0%, rgba(245,245,245,0) 100%);
+        background: linear-gradient(-90deg, rgba(245,245,245,0.8) 0%, rgba(245,245,245,0) 100%);
     }
   }
 
