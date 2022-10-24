@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-	box-shadow: 2px 0px 10px 0px rgb(0 0 0 / 10%);
+	box-shadow: 2px 0px 10px 0px rgb(#222, 0.15);
 	overflow-y: hidden;
   }
 
@@ -54,6 +54,7 @@
       color: var(--white);
       margin-bottom: 2rem;
       text-align: center;
+	  text-shadow: var(--text-shadow-title);
   }
 }
 

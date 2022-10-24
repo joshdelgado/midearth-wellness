@@ -9,38 +9,38 @@ services:
   description: This session will feature deeper work to the clients comfort level. This massage is to relieve any severe or chronic pain.
   image: /assets/img/raw/clinical-massage.jpg
   rates:
-    1hour: $109
-    90min: $135
-    120min: $160
+    1 hr: $109
+    75 min: $135
+    90 min: $160
 - title: Swedish Relaxation Massage
   description: Features lighter pressure and long, fluid strokes, ideal for increasing circulation and deeper breathing. 
   image: /assets/img/raw/relaxation-massage.jpg
   rates:
-    1hour: $99
-    90min: $125
-    120min: $150
+    1 hr: $99
+    75 min: $125
+    90 min: $150
 - title: Prenatal Massage
   description: A relaxing for expecting mothers with extra attention given to areas of tightness, swelling, and tenderness.
   image: /assets/img/raw/prenatal-massage.jpg
   note: Must be in the second trimester to schedule
   rates:
-    1hour: $99
-    90min: $125
-    120min: $150
+    1 hr: $99
+    75 min: $125
+    90 min: $150
 - title: Hemp Extract Massage
   description: Incorporate a powerful hemp extract oil known as cannabidiol (CBD) to aid in decreasing inflammation and anxiety.
   image: /assets/img/raw/cbd-massage.jpg
   rates:
-    1hour: $119
-    90min: $145
-    120min: $170
+    1 hr: $119
+    75 min: $145
+    90 min: $170
 - title: Sports Massage & Cupping
   description: Reach a new level of fitness with proper recovery while increasing mobility and circulation throughout the body.
   image: /assets/img/raw/cupping.jpg
   rates:
-    1hour: $109
-    90min: $135
-    120min: $160
+    1 hr: $109
+    75 min: $135
+    90 min: $160
 - title: Event Massage
   description: Your employees will feel appreciated for all of their hard work. Your gym members and trainers will know you care. The guests to your next spa party will too.
   image: /assets/img/raw/event-massage.jpg
