@@ -35,16 +35,13 @@ services:
     1 hr: $119
     75 min: $145
     90 min: $170
-- title: Sports Massage & Cupping
-  description: Reach a new level of fitness with proper recovery while increasing mobility and circulation throughout the body.
-  image: /assets/img/cupping.webp
-  rates:
-    1 hr: $109
-    75 min: $135
-    90 min: $160
 - title: Event Massage
   description: Your employees will feel appreciated for all of their hard work. Your gym members and trainers will know you care. The guests to your next spa party will too.
   image: /assets/img/event-massage.webp
+  note: Contact me for picing!
+- title: Sports Massage & Cupping
+  description: Reach a new level of fitness with proper recovery while increasing mobility and circulation throughout the body.
+  image: /assets/img/cupping.webp
   note: Contact me for picing!
 addons:
   - title: Healing Essential Oil Protocols
