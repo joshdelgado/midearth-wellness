@@ -6,6 +6,7 @@
   align-items: stretch;
   width: 100%;
   background-color: var(--purple);
+  overflow-y: hidden;
 
   &__img {
     flex: 1 1 50%;
@@ -73,7 +74,6 @@
 	.about {
 		&__img {
 			flex: 1 1 40%;
-			border-radius: calc(var(--border-radius) * 2);
 		}
 	}
 }
@@ -89,6 +89,7 @@
 			width: 27rem;
 			height: 27rem;
 			margin-bottom: 5rem;
+			border-radius: calc(var(--border-radius) * 2);
 		}
 		&__text {
 			flex: 1 1 100%;
